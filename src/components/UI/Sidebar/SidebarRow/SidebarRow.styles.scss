@@ -1,0 +1,23 @@
+/*#region UI: SidebarRow */
+.SidebarRow {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+
+  & h4 {
+    font-weight: 600;
+    margin-left: 20px;
+  }
+
+  & .MuiSvgIcon-root {
+    color: #2e81f4;
+    font-size: xx-large;
+  }
+
+  &:hover {
+    background-color: lightgrey;
+    border-radius: 10px;
+  }
+}
+/*#endregion /UI: SidebarRow */

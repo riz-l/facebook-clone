@@ -1,0 +1,31 @@
+//*#region UI: Story */
+.Story {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 17px -7px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-right: 10px;
+  height: 200px;
+  position: relative;
+  transition: 100ms ease-in;
+  width: 120px;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+  & h4 {
+    bottom: 20px;
+    color: white;
+    left: 20px;
+    position: absolute;
+  }
+
+  .Story__avatar {
+    border: 5px solid #2381f4;
+    margin: 10px;
+  }
+}
+//*#endregion UI: Story */

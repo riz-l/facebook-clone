@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Import: Dependencies
+import React from "react";
 
+// Import: Styling
+import "./App.styles.scss";
+
+// Import: UI
+import Feed from "./components/UI/Feed/Feed.component";
+import Header from "./components/UI/Header/Header.component";
+import Sidebar from "./components/UI/Sidebar/Sidebar.component";
+
+// Component: App
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <div className="App__body">
+        <Sidebar />
+        <Feed />
+        {/* // Feed */}
+        {/* // Widgets */}
+      </div>
     </div>
   );
 }
 
+// Export: App
 export default App;
