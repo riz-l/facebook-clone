@@ -19,8 +19,14 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 // Import: Material Core
 import { Avatar, IconButton } from "@material-ui/core";
 
+// Import: StateProvider
+import { useStateValue } from "../../../StateProvider";
+
 // UI: Header
 function Header() {
+  // StateProvider = user
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="Header">
       <div className="Header__left">
@@ -35,27 +41,27 @@ function Header() {
       </div>
 
       <div className="Header__center">
-        <div className="Header__option Header__option-active">
+        <div title="Home" className="Header__option Header__option-active">
           <HomeIcon fontSize="large" />
         </div>
-        <div className="Header__option">
+        <div title="Pages" className="Header__option">
           <FlagIcon fontSize="large" />
         </div>
-        <div className="Header__option">
+        <div title="Watch" className="Header__option">
           <SubscriptionsOutlinedIcon fontSize="large" />
         </div>
-        <div className="Header__option">
+        <div title="Marketplace" className="Header__option">
           <StorefrontOutlinedIcon fontSize="large" />
         </div>
-        <div className="Header__option">
+        <div title="Groups" className="Header__option">
           <SupervisedUserCircleIcon fontSize="large" />
         </div>
       </div>
 
       <div className="Header__right">
         <div className="Header__info">
-          <Avatar />
-          <h4>Riz Layton</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName}</h4>
         </div>
 
         <IconButton>

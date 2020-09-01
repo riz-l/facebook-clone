@@ -15,16 +15,18 @@ import { ExpandMoreOutlined } from "@material-ui/icons";
 
 // Import: Components
 import SidebarRow from "./SidebarRow/SidebarRow.component";
-import { useRadioGroup } from "@material-ui/core";
+
+// Import: StateProvider
+import { useStateValue } from "../../../StateProvider";
 
 // UI: Sidebar
 function Sidebar() {
+  // StateProvider = user
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="Sidebar">
-      <SidebarRow
-        src="https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png"
-        title="Riz Layton"
-      />
+      <SidebarRow src={user.photoURL} title={user.displayName} />
       <SidebarRow
         Icon={LocalHospitalIcon}
         title="COVID-19 Information Center"

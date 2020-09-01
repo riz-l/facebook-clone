@@ -1,0 +1,39 @@
+/*#region page: Login */
+.Login {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+
+  .Login__logo {
+    display: flex;
+    flex-direction: column;
+
+    & .Login__logoImage {
+      height: 150px;
+      margin: 20px 0;
+      object-fit: contain;
+    }
+
+    & .Login__logoText {
+      height: 50px;
+      margin: 20px 0;
+      object-fit: contain;
+    }
+  }
+
+  & button {
+    background-color: #2e81f4;
+    color: #eff2f5;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    width: 300px;
+
+    &:hover {
+      color: #2e81f4;
+      background-color: white;
+    }
+  }
+}
+/*#endregion /page: Login */

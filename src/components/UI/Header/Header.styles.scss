@@ -4,12 +4,13 @@
   box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 5px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
 
   .Header__left {
+    align-items: center;
     display: flex;
     justify-content: space-evenly;
 
@@ -21,6 +22,7 @@
       align-items: center;
       background-color: #eff2f5;
       border-radius: 999px;
+      color: gray;
       display: flex;
       margin-left: 10px;
       padding: 10px;
@@ -28,6 +30,8 @@
       & input {
         background-color: transparent;
         border: none;
+        font-size: 14px;
+        margin-left: 8px;
         outline-width: 0;
       }
     }
@@ -42,7 +46,7 @@
       align-items: center;
       cursor: pointer;
       display: flex;
-      padding: 0 30px;
+      padding: 0 60px;
 
       & .MuiSvgIcon-root {
         color: gray;
@@ -53,7 +57,7 @@
         background-color: #eff2f5;
         border-bottom: none;
         border-radius: 10px;
-        padding: 0 30px;
+        padding: 0 60px;
 
         & .MuiSvgIcon-root {
           color: #2e81f4;
@@ -62,7 +66,7 @@
     }
 
     .Header__option-active {
-      border-bottom: 4px solid #2e81f4;
+      border-bottom: 3px solid #2e81f4;
 
       & .MuiSvgIcon-root {
         color: #2e81f4;
@@ -76,6 +80,7 @@
     .Header__info {
       align-items: center;
       display: flex;
+      margin-right: 10px;
 
       & h4 {
         margin-left: 10px;

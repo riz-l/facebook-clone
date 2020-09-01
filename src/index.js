@@ -11,10 +11,18 @@ import App from "./App";
 // Import: Service Worker
 import * as serviceWorker from "./serviceWorker";
 
+// Import: StateProvider
+import { StateProvider } from "./StateProvider";
+
+// Import: Reducer
+import reducer, { initialState } from "./reducer";
+
 // Render: App
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
